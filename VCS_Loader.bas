@@ -72,12 +72,12 @@ Err_LoadHandler:
 Fin_LoadHandler:
     Debug.Print "Done"
     
-    displayFormVersion
+    displayFormVersion SourceDirectory
 End Sub
 
-Public Sub displayFormVersion()
+Public Sub displayFormVersion(ByVal SourceDirectory As String)
     Dim versionPath As String, FormsVersion As String, textline As String, posLat As Integer, posLong As Integer
-    versionPath = CurrentProject.Path & "\VERSION.txt"
+    versionPath = SourceDirectory & "\VERSION.txt"
     Open versionPath For Input As #1
 
     Do Until EOF(1)
