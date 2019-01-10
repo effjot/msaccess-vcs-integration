@@ -87,5 +87,5 @@ Public Sub displayFormVersion(ByVal SourceDirectory As String)
     Loop
     Close #1
 
-    MsgBox "Form Version: " & FormsVersion & " loaded"
+    MsgBox "MS Access VCS Integration version " & FormsVersion & " successfully loaded", vbOKOnly, "MS Access VCS Integration Loader"
 End Sub
