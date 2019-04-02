@@ -4,16 +4,16 @@
     <mso:ribbon>
         <mso:qat/>
         <mso:tabs>
-            <mso:tab id="mso_c2.2B507795" label="FORM UPDATES">
-                <mso:group id="mso_c3.2B507795" label="Dialog" autoScale="true">
-                    <mso:button id="loadvmBtn" label="Load Version Manager"
+            <mso:tab id="mso_c2.2B507795" label="Version Control">
+                <mso:group id="mso_c3.2B507795" label="MS Access – VCS Integration" autoScale="true">
+                    <mso:button id="loadvmBtn" label="Load VCS Support"
                       imageMso="FormsMenu" onAction="loadVCS"/>
-                    <mso:button id="updateFormsBtn" label="Update Forms"
-                      imageMso="RecurrenceEdit" onAction="=subUpdateBtn(&quot;updateFormsBtn&quot;)"/>
-                    <mso:button id="exportFormsBtn" label="Export Forms"
-                      imageMso="SourceControlCheckOut" onAction="=subUpdateBtn(&quot;exportFormsBtn&quot;)"/>
-                    <mso:button id="otherFunctionsBtn" label="Other Functions"
-                      imageMso="TrustCenter" onAction="formDialog"/>
+                    <mso:button id="importSourceBtn" label="Import Source"
+                      imageMso="SourceControlCheckIn" onAction="=subUpdateBtn(&quot;importSourceBtn&quot;)"/>
+                    <mso:button id="exportSourceBtn" label="Export Source"
+                      imageMso="SourceControlCheckOut" onAction="=subUpdateBtn(&quot;exportSourceBtn&quot;)"/>
+                    <mso:button id="importProjectBtn" label="Import Project"
+                      imageMso="SourceControlCreateDatabaseFromProject" onAction="=subUpdateBtn(&quot;importProjectBtn&quot;)"/>
                 </mso:group>
             </mso:tab>
         </mso:tabs>
