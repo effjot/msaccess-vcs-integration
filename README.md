@@ -45,11 +45,11 @@ The module will put the files in a folder called `source` within the same folder
 
 For the purposes of these instructions, assume your database is called `Application.accdb`.
 
-1. Load `VCS_Loader.bas` into a new module in your database with that exact name.
- 1. Go to the VBA editor (CTRL-G) and select "File" > "Import File..."
-    (or you can just drag and drop the file from windows explorer into the vba editor module list).
- 2. Select the `VCS_Loader.bas` file.
- 3. Save the file (CTRL-S).
+1. Load `VCS_Loader.bas` into a new module in your database with that exact name:
+   1. Go to the VBA editor (CTRL-G) and select "File" > "Import File..."
+      (or you can just drag and drop the file from windows explorer into the vba editor module list).
+   2. Select the `VCS_Loader.bas` file.
+   3. Save the file (CTRL-S).
 2. Type "`loadVCS`" into the immediate window followed by the directory where the other VCS files are located. If you don't specify a directory then it is assumed that the VCS code is contained in a folder called 'MSAccess-VCS' in the database directory;
 e.g. `loadVCS "C:\Users\MyUserAccount\Documents\Access-Proj\MSAccess-VCS\"` - the trailing slash is required
 or `loadVCS` will not import the new modules.
