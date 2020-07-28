@@ -43,3 +43,29 @@ Public Function VCS_PadRight(ByVal Value As String, ByVal Count As Integer) As S
         VCS_PadRight = VCS_PadRight & Space$(Count - Len(Value))
     End If
 End Function
+
+' Remove escape characters
+Public Function VCS_RmEsc(Value)
+    Dim i As Integer
+    Dim nextChar As String
+    
+    If VarType(Value) <> vbString Then
+        VCS_RmEsc = Value
+        Exit Function
+    End If
+    
+    i = InStr(1, Value, "\")
+    Do Until i = 0
+        nextChar = Mid(Value, i + 1, 1)
+        Select Case nextChar
+            Case "\"
+                Value = left(Value, i - 1) & "\" & Mid(Value, i + 2)
+            Case "n"
+                Value = left(Value, i - 1) & vbCrLf & Mid(Value, i + 2)
+            Case "t"
+                Value = left(Value, i - 1) & vbTab & Mid(Value, i + 2)
+        End Select
+        i = InStr(i + 1, Value, "\")
+    Loop
+    VCS_RmEsc = Value
+End Function
