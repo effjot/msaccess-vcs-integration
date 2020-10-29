@@ -9,6 +9,7 @@
     "UseFastSave": false,
     "SavePrintVars": true,
     "SaveQuerySQL": true,
+    "ForceImportOriginalQuerySQL": false,
     "SaveTableSQL": true,
     "StripPublishOption": true,
     "AggressiveSanitize": true,
